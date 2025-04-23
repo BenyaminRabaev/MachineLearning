@@ -1,4 +1,4 @@
-'''
+
 # Your data
 IngredientsValues = {
     "Onion": 25,
@@ -34,4 +34,3 @@ def save_to_json():
 
 # Save the data
 save_to_json()
-'''
