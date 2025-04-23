@@ -1,0 +1,37 @@
+'''
+# Your data
+IngredientsValues = {
+    "Onion": 25,
+    "Tomato": 25,
+    "Turkey": 25,
+    "Beef": 25,
+    "Chicken": 25,
+    "Lettuce": 25,
+    "Dirt": -100
+}
+
+CondimentsValue = {
+    "Mayo": 0, 
+    "Ketchup": 0, 
+    "Mustard": 0,
+    "Hot Sauce": 0,
+    "Sewage": 0
+}
+
+Ingredients = ["Onion", "Tomato", "Turkey", "Beef", "Chicken", "Lettuce", "Dirt"]
+Condiments = ["Mayo", "Ketchup", "Mustard", "Hot Sauce", "Sewage"]
+
+# Function to save data to a JSON file
+def save_to_json():
+    data = {
+        'IngredientsValues': IngredientsValues,
+        'CondimentsValue': CondimentsValue,
+        'Ingredients': Ingredients,
+        'Condiments': Condiments
+    }
+    with open('ingredients_data.json', 'w') as f:
+        json.dump(data, f, indent=4)  # Save data to 'ingredients_data.json' with indentation
+
+# Save the data
+save_to_json()
+'''
