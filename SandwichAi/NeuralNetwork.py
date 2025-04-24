@@ -38,11 +38,11 @@ x       X
 x       X
         X       X
 x       X
-        X       X   X
+        X       X   
 x       X
-        X       X
+        X       X       x
 x       X
-        X       X   X
+        X       X   
 x       X
         X       X
 x       X
