@@ -4,9 +4,6 @@ from SandwichCreator import CreateSandwich
 from SandwichValues import Ingredients, IngredientsValues, save_to_json
 import json
 
-Sandwich = CreateSandwich()
-SandwichRating = EvaluateSandwich(Sandwich)
-
 
 def CorrectSandwich(Sandwich, SandwichRating):
     if SandwichRating > 49:
@@ -23,7 +20,6 @@ def CorrectSandwich(Sandwich, SandwichRating):
 
             
 
-CorrectSandwich(Sandwich, SandwichRating)
 
 
 

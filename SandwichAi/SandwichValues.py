@@ -1,3 +1,4 @@
+
 import json
 def load_from_json():
     with open('ingredients_data.json', 'r') as f:
@@ -12,13 +13,20 @@ IngredientsValues = data['IngredientsValues']
 CondimentsValue = data['CondimentsValue']
 Ingredients = data['Ingredients']
 Condiments = data['Condiments']
+HiddenLayer1 = data['HiddenLayer1']
+HiddenLayer2 = data['HiddenLayer2']
+FinalLayer = data['FinalLayer']
+
 # Function to save data to a JSON file
 def save_to_json():
     data = {
         'IngredientsValues': IngredientsValues,
         'CondimentsValue': CondimentsValue,
         'Ingredients': Ingredients,
-        'Condiments': Condiments
+        'Condiments': Condiments,
+        'HiddenLayer1': HiddenLayer1,
+        'HiddenLayer2': HiddenLayer2,
+        'FinalLayer': FinalLayer
     }
     with open('ingredients_data.json', 'w') as f:
         json.dump(data, f, indent=4)  # Save data to 'ingredients_data.json' with indentation
