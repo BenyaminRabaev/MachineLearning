@@ -1,5 +1,6 @@
 import random
 from random import randint
+import math
 # Online Python - IDE, Editor, Compiler, Interpreter
 
 def CreateRandomList(Length):
@@ -9,11 +10,11 @@ def CreateRandomList(Length):
     return list
     
 class Perceptron:   
-    def NewPerceptron(Weights, Values, Bias):
-        y = 0  + Bias
-        for i in range(4):
-            x = Weights[i - 1] * Values[i-1]
-            y = y + x
-        return y 
+    def PerceptronValue(Weights, Values, Bias):
+        for i in range(len(Weights)):
+            x = Weights[i] * Values[i]
+            x = x +  Bias
+            x = 1 / (1  + math.exp(-x))
+        return x
         
 

@@ -4,10 +4,7 @@ def EvaluateSandwich(Sandwich):
     DelishValue = 0
     for i in range(len(Sandwich.ingredients)):
         DelishValue = DelishValue + IngredientsValues[Sandwich.ingredients[i]]
-        if Sandwich.ingredients[i] == "Dirt":
-            DelishValue = -1000
-    return DelishValue
-      
+        return DelishValue/100 * -1
 
 
 
