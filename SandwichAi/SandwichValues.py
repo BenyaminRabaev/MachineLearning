@@ -16,6 +16,9 @@ Condiments = data['Condiments']
 HiddenLayer1 = data['HiddenLayer1']
 HiddenLayer2 = data['HiddenLayer2']
 FinalLayer = data['FinalLayer']
+BiasLayer1 = data['BiasLayer1']
+BiasLayer2 = data['BiasLayer2']
+FinalBias = data['FinalBias']
 
 # Function to save data to a JSON file
 def save_to_json():
@@ -26,7 +29,10 @@ def save_to_json():
         'Condiments': Condiments,
         'HiddenLayer1': HiddenLayer1,
         'HiddenLayer2': HiddenLayer2,
-        'FinalLayer': FinalLayer
+        'FinalLayer': FinalLayer,
+        'BiasLayer1': BiasLayer1,
+        'BiasLayer2': BiasLayer2,
+        'FinalBias': FinalBias
     }
     with open('ingredients_data.json', 'w') as f:
         json.dump(data, f, indent=4)  # Save data to 'ingredients_data.json' with indentation
