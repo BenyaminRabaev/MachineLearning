@@ -60,7 +60,7 @@ def GradientDescent(Sandwich):
     Bias2 = BiasLayer2
     Bias3 = FinalBias
     LearningRate = 0.01  
-    Total_Epochs = 100000
+    Total_Epochs = 1000000
     CorrectSandwiches = 0
     for epochs in range(Total_Epochs):
         Sandwich = CreateSandwich()
@@ -93,10 +93,12 @@ def GradientDescent(Sandwich):
         Bias1 = UpdateBiasesWithGradient(Bias1, grad_b1, LearningRate)
         Bias2 = UpdateBiasesWithGradient(Bias2, grad_b2, LearningRate)
         Bias3 = UpdateBiasesWithGradient(Bias3, grad_b3, LearningRate)
-        if epochs % 100 == 0:
-            print(f"Epoch {epochs}: Loss = {loss}")
-        if loss < 0.1:
+        if epochs % 10000 == 0:
+            print(f"Epoch {epochs}: MeanLoss = {loss}: TrueLoss = {true_output-predicted_output}")
+
+        if true_output - predicted_output < 0.1 and true_output-predicted_output > -0.1:
             CorrectSandwiches += 1
+        
 
     print("Final Prediction:", predicted_output)
     print("Final Weights:", Weights3)

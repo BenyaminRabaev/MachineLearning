@@ -1,9 +1,10 @@
 
 import json
 def load_from_json():
-    with open('SandwichAi/ingredients_data.json', 'r') as f:
+    with open('ingredients_data.json', 'r') as f:
         data = json.load(f)  # Deserialize JSON back into Python dictionaries
     return data
+
 
 # Load the data
 data = load_from_json()
@@ -21,7 +22,7 @@ BiasLayer2 = data['BiasLayer2']
 FinalBias = data['FinalBias']
 
 # Function to save data to a JSON file
-def save_to_json():
+def save_to_json(HiddenLayer2):
     data = {
         'IngredientsValues': IngredientsValues,
         'CondimentsValue': CondimentsValue,
@@ -34,8 +35,8 @@ def save_to_json():
         'BiasLayer2': BiasLayer2,
         'FinalBias': FinalBias
     }
-    with open('SandwichAi/ingredients_data.json', 'w') as f:
+    with open('ingredients_data.json', 'w') as f:
         json.dump(data, f, indent=4)  # Save data to 'SandwichAi/ingredients_data.json' with indentation
 
 # Save the data
-save_to_json()
+save_to_json(HiddenLayer2)
