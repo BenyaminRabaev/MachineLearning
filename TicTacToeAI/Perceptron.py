@@ -9,7 +9,7 @@ def CreateRandomNestedList(Lists,Length):
     NestedList = []
     for j in range(Lists):
         if j >= 1:
-            NestedList.append(list)
+            NestedList.append(list) 
         list = []
         for i in range(Length):
             list.append(random.randint(1,100)/100)
